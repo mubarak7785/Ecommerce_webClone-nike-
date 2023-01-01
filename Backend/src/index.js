@@ -8,7 +8,9 @@ app.use(express.json())
 
 const connect=require("./configs/db")
 
+const dataController=require("./controllers/data.controller")
 
+app.use("/data",dataController)
 
 
 app.listen(port,async function (req,res){
