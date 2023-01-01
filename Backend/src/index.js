@@ -8,6 +8,11 @@ app.use(express.json())
 
 const connect=require("./configs/db")
 
+const {register,login}=require("./controllers/auth.controller")
+app.post("/register",register)
+app.post ("/login",login)
+
+
 const dataController=require("./controllers/data.controller")
 
 app.use("/data",dataController)
