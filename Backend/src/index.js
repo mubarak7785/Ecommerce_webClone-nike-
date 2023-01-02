@@ -8,14 +8,14 @@ app.use(express.json())
 
 const connect=require("./configs/db")
 
-const {register,login}=require("./controllers/auth.controller")
-app.post("/register",register)
-app.post ("/login",login)
+
 
 
 const dataController=require("./controllers/data.controller")
-
+const bagController=require("./controllers/bag.controller")
 app.use("/data",dataController)
+app.use("/bag",bagController)
+
 
 
 app.listen(port,async function (req,res){
