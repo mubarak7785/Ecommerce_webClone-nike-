@@ -1,0 +1,37 @@
+.header{
+    width: 100%;
+    height: 45px;
+    display: flex;
+    background-color: lightblue;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.box1{
+    width: 5%;
+    height: 100%;
+    margin-left: 2%;
+}
+.box1>img{
+    width: 100%;
+    height: 100%;
+    background-color: lightblue;
+}
+.box2{
+    display: flex;
+    width: 15%;
+    height: 100%;
+    gap: 5%;
+    align-items: center;
+}
+.help-list{
+    margin-left: 72%;
+   border-radius: 5%;
+    width: 15%;
+    box-shadow: #32326926 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    line-height: 65%;
+   padding-top: 1%;
+   padding-bottom: 1%;
+  padding-left: 2%;
+  position: fixed;
+}
