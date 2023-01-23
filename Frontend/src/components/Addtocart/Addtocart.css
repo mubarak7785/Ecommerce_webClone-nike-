@@ -1,0 +1,64 @@
+.bag-cotainer{
+    width: 60%;
+    margin-left: 5%;
+    margin-top: 2%;
+}
+.bag-display-div{
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    font-weight: bold;
+  
+}
+.del-para{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 1px;
+    border: 1px solid black;
+}
+.del-para:hover{
+    color: red;
+    background-color: white;
+    cursor: pointer;
+}
+.price-div{
+    width: 20%;
+    border: 3px solid black;
+    height: 350px;
+    margin-right: 5%;
+    padding: 30px 20px;
+    margin-top: 2%;
+    font-weight: bold;
+    font-size: 20px;
+    background-color: whitesmoke;
+}
+.main-continer{
+    display: flex;
+    justify-content: space-between;
+}
+.price-div-inner{
+    display: flex;
+    justify-content: space-between;
+}
+.price-heading{
+    width: 40%;
+    margin: auto;
+    text-decoration: underline;
+}
+
+.jj{
+    margin-top: 5%;
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    margin-left: 15%;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+.jj:hover{
+    background-color: black;
+    color: white;
+}
