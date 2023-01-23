@@ -1,0 +1,47 @@
+
+
+.filter{
+    width: 70%;
+    height: 50px;
+    display: flex;
+    gap: 4%;
+   justify-content: space-between;
+  
+    align-items: center;
+}
+.filter>div>label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.filter>div>select{
+    font-size: 20px;
+    color: black;
+}
+
+.main{
+    width: 90%;
+    /* border: 1px solid black; */
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 20px;
+}
+.display{
+    /* border: 1px solid green; */
+    width: 100%;
+}
+
+.p-name{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    justify-content: space-between;
+    align-items: center;
+}
+.p-name>p{
+    font-size: 25px;
+    font-weight: bold;
+    padding: 0;
+}
