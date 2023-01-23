@@ -1,0 +1,28 @@
+.productdetail-div{
+    width: 50%;
+    height: 550px;
+    margin: auto;
+    border: 1px solid grey;
+}
+.detaildiv{
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+}
+.addtocart-btn{
+    /* height: 25px;
+    background-color: black;
+    color:white;
+    border-radius:12px;
+    cursor: pointer;
+    padding: 5px; */
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.addtocart-btn:hover{
+    background-color: blue;
+    color: white;
+}

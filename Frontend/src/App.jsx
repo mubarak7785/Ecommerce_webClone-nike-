@@ -1,34 +1,44 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-
+import { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { Home } from "./components/Home/Home";
+import { Footer } from "./components/Footer/Footer";
+import { Header } from "./components/Header/Header";
+import { Navbar } from "./components/Navbar/Navbar";
+import { Women } from "./components/Women/Women";
+import {Men} from "./components/Men/Men"
+import { Route, Routes } from "react-router-dom";
+import { Kid } from "./components/Kid/Kid";
+import { Snkrs } from "./components/SNKRS/Snkrs";
+import {Signup} from "./components/Signup/Signup"
+import { Login } from "./components/Login/Login";
+import { Productdetail } from "./components/Product_Details/ProductDetail";
+import {Bag} from "./components/Addtocart/Addtocart"
+import { Payment } from "./components/Payment/Payment";
+import { Order } from "./components/Order/Order";
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div>
+      <Header />
+      <Navbar />
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/women' element={<Women/>}/>
+        <Route path='/men' element={<Men/>}/>
+        <Route path='/kids' element={<Kid/>}/>
+        <Route path="/snkrs" element={<Snkrs/>}/>
+        <Route path="/signIn" element={<Signup/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/detail/:id" element={<Productdetail/>}/>
+        <Route path="/cart"  element={<Bag/>} />
+        <Route path="/payment" element={<Payment/>}/>
+        <Route path="/ordersuccess" element={<Order/>}/>
+      </Routes>
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
