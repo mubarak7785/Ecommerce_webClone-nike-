@@ -1,0 +1,35 @@
+.card09{
+    width: 400px;
+    height: 250px;
+    background-color: lightpink;
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .klll{
+    text-align: center;
+    font-size: 25px;
+    color: gray;
+    font-weight: bold;
+  }
+  .ppp {
+    margin: auto;
+    text-align: center;
+    background-color: lightpink;
+    color: black;
+    border-radius: 30px;
+    padding: 10px 30px;
+    width: 30%;
+    margin-top: 50px;
+    margin-bottom: -3%;
+  }
+
+  .ppp:hover{
+      background-color: blue;
+      color: white;
+  }
