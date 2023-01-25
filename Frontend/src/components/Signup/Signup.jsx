@@ -31,6 +31,9 @@ export const Signup = () => {
       alert("You have successfully registered.")
       navigate("/login");
     }
+    else{
+      alert("You are already registered do login !")
+    }
   }, [data]);
 
   // const loginpage=()=>{
