@@ -27,7 +27,10 @@ export const Signup = () => {
   };
 
   useEffect(() => {
-    if (data.token) navigate("/login");
+    if (data.token) {
+      alert("You have successfully registered.")
+      navigate("/login");
+    }
   }, [data]);
 
   // const loginpage=()=>{

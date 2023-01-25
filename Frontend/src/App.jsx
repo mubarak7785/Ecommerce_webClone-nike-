@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from "./logo.svg";
+
 import "./App.css";
 import { Home } from "./components/Home/Home";
 import { Footer } from "./components/Footer/Footer";
@@ -12,7 +12,7 @@ import { Kid } from "./components/Kid/Kid";
 import { Snkrs } from "./components/SNKRS/Snkrs";
 import {Signup} from "./components/Signup/Signup"
 import { Login } from "./components/Login/Login";
-import { Productdetail } from "./components/Product_Details/ProductDetail";
+import { Productdetail } from "./components/Product_Details/ProductDetails";
 import {Bag} from "./components/Addtocart/Addtocart"
 import { Payment } from "./components/Payment/Payment";
 import { Order } from "./components/Order/Order";

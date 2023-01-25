@@ -24,7 +24,8 @@ const handlechange=(e)=>{
       method:"POST",
       body:JSON.stringify(logindata),
       headers:{"content-type":"application/json"}
-      }).then(Response=>Response.json()).then((data)=>{dispatch(loginsuccess(data));if(data.token)navigate("/"); else{alert("enter correct details")} }).catch((e)=>{dispatch(loginfailure)})
+      }).then(Response=>Response.json()).then((data)=>{dispatch(loginsuccess(data));
+        if(data.token) alert("You have been logged in successfully"),navigate("/"); else{alert("enter correct details")} }).catch((e)=>{dispatch(loginfailure)})
   }
  
   return (

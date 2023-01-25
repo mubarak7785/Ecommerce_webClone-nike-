@@ -48,10 +48,10 @@ export const Productdetail = () => {
                 const obj=myproduct[0];
                 delete obj._id;
                 bagfun(obj)
-                alert("Product is added to the cart")
+                alert("Product is added to the cart.")
                }
                 else {
-                    alert("please login to your account")
+                    alert("Please login to your account !")
                     // navigate(-1);
                 }
               }}
