@@ -17,7 +17,8 @@ const dataController=require("./controllers/data.controller")
 const bagController=require("./controllers/bag.controller")
 app.use("/data",dataController)
 app.use("/bag",bagController)
-
+const empolyeeController=require("./controllers/employee.controller")
+app.use("/employee",empolyeeController)
 
 
 app.listen(port,async function (req,res){
