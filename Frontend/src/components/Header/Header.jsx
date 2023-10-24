@@ -16,7 +16,7 @@ export const Header=()=>{
                 <p>|</p>
                 <p>Join Us</p>
                 <p>|</p>
-                <Link to="/signIn"><p>Sign In</p></Link>
+                <Link to="/login"><p>Sign In</p></Link>
                 
             </div>
         </div>

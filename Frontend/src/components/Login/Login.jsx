@@ -6,6 +6,9 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 // import { store } from '../Redux/Store'
 import "./Login.css";
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content'
+const MySwal = withReactContent(Swal)
 
 export const Login=()=>{
 const navigate=useNavigate();  
@@ -25,7 +28,11 @@ const handlechange=(e)=>{
       body:JSON.stringify(logindata),
       headers:{"content-type":"application/json"}
       }).then(Response=>Response.json()).then((data)=>{dispatch(loginsuccess(data));
-        if(data.token) alert("You have been logged in successfully"),navigate("/"); else{alert("Invalid deatails please try again !")} }).catch((e)=>{dispatch(loginfailure)})
+        if(data.token) MySwal.fire(
+          'You have been logged in successfully',
+          'Please click the button!',
+          'success'
+        ),navigate(-1); else{alert("Invalid deatails please try again !")} }).catch((e)=>{dispatch(loginfailure)})
   }
  
   return (

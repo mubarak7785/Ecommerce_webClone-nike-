@@ -3,6 +3,10 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import "./ProductDetails.css";
 import { store } from "../Redux/store";
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content'
+const MySwal = withReactContent(Swal)
+
 export const Productdetail = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -31,15 +35,15 @@ export const Productdetail = () => {
   return (
     <div>
       <div className="productdetail-div">
-        <img width="100%" height="80%" src={myproduct[0].imgUrl} />
+        <img width="40%" height="100%" src={myproduct[0].imgUrl} />
         <div className="detaildiv">
           <div>
-            <p>name:{myproduct[0].name}</p>
-            <p>category:{myproduct[0].category}</p>
+            <p>Name : {myproduct[0].name}</p>
+            <p>Category : {myproduct[0].category}</p>
           </div>
           <div>
-            <p>color:{myproduct[0].color}</p>
-            <p>price:{myproduct[0].Price}</p>
+            <p>Color : {myproduct[0].color}</p>
+            <p>Price : {myproduct[0].Price}</p>
           </div>
           <div>
             <button
@@ -48,11 +52,21 @@ export const Productdetail = () => {
                 const obj=myproduct[0];
                 delete obj._id;
                 bagfun(obj)
-                alert("Product is added to the cart.")
+                // alert("Product is added to the cart.")
+                MySwal.fire(
+                  'Product is added to the cart.',
+                  'Please click the button!',
+                  'success'
+                )
                }
                 else {
-                    alert("Please login to your account !")
-                    // navigate(-1);
+                    // alert("Please login to your account !")
+                    MySwal.fire(
+                      'Please login to your account',
+                      'Please click the button!',
+                      'failed'
+                    )
+                    navigate("/login");
                 }
               }}
               className="addtocart-btn"
@@ -61,7 +75,13 @@ export const Productdetail = () => {
             </button>
             <br />
             <br />
-            <button className="addtocart-btn">Add to Favourite</button>
+            <button className="addtocart-btn" onClick={()=>{
+              MySwal.fire(
+                'Product is added to the Favourites.',
+                'Please click the button!',
+                'success'
+              )
+            }}>Add to Favourite</button>
           </div>
         </div>
       </div>
